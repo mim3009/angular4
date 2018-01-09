@@ -1,0 +1,5 @@
+<div *ngFor="let ticket of tickets">{{ticket.number}}</div>
+<form (ngSubmit)="onSubmit()" #f>
+	<router-outlet></router-outlet>
+	<button class="btn btn-success" type="submit" [disabled]="!f.valid && f.touched">Submit</button>
+</form>
